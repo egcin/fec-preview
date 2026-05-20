@@ -32,6 +32,8 @@ if (navToggle && nav) {
 }
 
 document.querySelectorAll("[data-copy-email]").forEach((button) => {
+  const originalText = button.textContent || "";
+  let resetTimer = null;
   button.addEventListener("click", async () => {
     const email = button.getAttribute("data-copy-email") || "";
     try {
@@ -40,7 +42,26 @@ document.querySelectorAll("[data-copy-email]").forEach((button) => {
     } catch {
       button.textContent = email;
     }
+    if (resetTimer) clearTimeout(resetTimer);
+    resetTimer = setTimeout(() => {
+      button.textContent = originalText;
+    }, 2000);
   });
+});
+
+// Highlight the nav link for the page we're currently on, so visitors always
+// know where they are in the site.
+const currentPath = window.location.pathname.replace(/\/index\.html$/, "/");
+document.querySelectorAll(".site-nav a[href]").forEach((link) => {
+  const href = link.getAttribute("href") || "";
+  if (!href || href.startsWith("#")) return;
+  const resolved = new URL(link.href, window.location.origin).pathname.replace(
+    /\/index\.html$/,
+    "/",
+  );
+  if (resolved === currentPath) {
+    link.setAttribute("aria-current", "page");
+  }
 });
 
 // Surface a success banner when FormSubmit redirects back with ?sent=1, so the
