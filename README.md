@@ -8,8 +8,6 @@ Bu depo, Emek Hukuk Danışmanlık ve Arabuluculuk Merkezi web sitesinin **yayı
 
 `robots.txt` üzerinden arama motoru indekslemesi kapatılmıştır; bu sayfa Google sonuçlarında çıkmaz, yalnızca bağlantıyı bilen kişiler ulaşabilir.
 
-## İnceleme akışı
+## Güncellemeler
 
-1. Bağlantıyı tarayıcıda açın.
-2. Üstteki menüden Rehberler, Hizmetler, Kayseri Avukat, Kayseri Arabulucu sayfalarını gezerek içerik incelemesini yapın.
-3. Geri bildirim ve düzeltme notları büroya iletilsin; düzeltmeler kaynak depoda işlenip bu önizleme tekrar güncellenir.
+Bu önizleme, ana depodaki (`egcin/fec`) `main` dalına her commit sonrasında otomatik olarak güncellenir.

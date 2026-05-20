@@ -14,11 +14,44 @@
     <meta property="og:title" content="İletişim | Emek Hukuk Kayseri" />
     <meta property="og:description" content="Emek Hukuk Danışmanlık ve Arabuluculuk Merkezi iletişim bilgileri, Kayseri OSB adresi ve randevu formu." />
     <meta property="og:url" content="https://www.emekarabuluculuk.com/pages/iletisim.html" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="İletişim | Emek Hukuk Kayseri" />
+        <meta name="twitter:title" content="İletişim | Emek Hukuk Kayseri" />
     <meta name="twitter:description" content="Emek Hukuk Danışmanlık ve Arabuluculuk Merkezi iletişim bilgileri, Kayseri OSB adresi ve randevu formu." />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "İletişim — Emek Hukuk",
+        "url": "https://www.emekarabuluculuk.com/pages/iletisim.html",
+        "inLanguage": "tr-TR",
+        "mainEntity": {
+          "@type": "LegalService",
+          "name": "Emek Hukuk Danışmanlık ve Arabuluculuk Merkezi",
+          "url": "https://www.emekarabuluculuk.com/",
+          "email": "info@emekarabuluculuk.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Kayseri Organize Sanayi Bölgesi 9. Cadde No:5/1-4",
+            "addressLocality": "Melikgazi",
+            "addressRegion": "Kayseri",
+            "addressCountry": "TR"
+          },
+          "areaServed": {"@type": "City", "name": "Kayseri"},
+          "inLanguage": "tr-TR"
+        }
+      }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png" />
+    <meta property="og:image" content="https://www.emekarabuluculuk.com/assets/img/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://www.emekarabuluculuk.com/assets/img/og-image.png" />
   </head>
   <body>
+    <a class="skip-link" href="#main">İçeriğe atla</a>
     <header class="site-header">
       <a class="brand" href="../index.html"><span class="brand-mark">E</span><span><strong>Emek Hukuk</strong><small>Danışmanlık & Arabuluculuk</small></span></a>
       <button class="nav-toggle" type="button" aria-label="Menüyü aç" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -27,11 +60,11 @@
         <a href="rehberler.html">Rehberler</a>
         <a href="hizmetler.html">Hizmetler</a>
         <a href="kayseri-avukat.html">Kayseri Avukat</a>
-        <a href="arabuluculuk.html">Arabuluculuk</a>
+        <a href="kayseri-arabulucu.html">Kayseri Arabulucu</a>
         <a href="iletisim.html">İletişim</a>
       </nav>
     </header>
-    <main>
+    <main id="main" tabindex="-1">
       <section class="page-hero">
         <p class="eyebrow">İletişim</p>
         <h1>Görüşme talebi ve ofis bilgileri.</h1>
@@ -50,22 +83,27 @@
           <button class="button ghost copy-email" type="button" data-copy-email="info@emekarabuluculuk.com">E-postayı Kopyala</button>
         </aside>
         <div class="contact-card">
+          <div class="form-success" data-form-success hidden role="status" aria-live="polite">
+            Talebiniz iletildi. En kısa sürede info@emekarabuluculuk.com üzerinden dönüş sağlanır.
+          </div>
           <form id="contact-form" class="contact-form" action="https://formsubmit.co/info@emekarabuluculuk.com" method="POST">
             <input type="hidden" name="_subject" value="Web Sitesi İletişim Talebi" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_next" value="https://www.emekarabuluculuk.com/pages/iletisim.html?sent=1" />
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
             <div class="field">
               <label for="name">Ad Soyad</label>
-              <input id="name" name="name" autocomplete="name" required />
+              <input id="name" name="name" autocomplete="name" maxlength="120" required />
             </div>
             <div class="field">
               <label for="email">E-posta</label>
-              <input id="email" name="email" type="email" autocomplete="email" required />
+              <input id="email" name="email" type="email" autocomplete="email" maxlength="160" required />
             </div>
             <div class="field">
               <label for="topic">Konu</label>
-              <select id="topic" name="topic">
+              <select id="topic" name="topic" required>
+                <option value="" disabled selected>Konuyu seçin</option>
                 <option>Şirket danışmanlığı</option>
                 <option>İş hukuku</option>
                 <option>Arabuluculuk</option>
@@ -75,7 +113,17 @@
             </div>
             <div class="field">
               <label for="message">Kısa açıklama</label>
-              <textarea id="message" name="message" required></textarea>
+              <textarea id="message" name="message" maxlength="3000" required></textarea>
+            </div>
+            <div class="field field-checkbox">
+              <label>
+                <input type="checkbox" name="kvkk_onay" value="evet" required />
+                <span>
+                  <a href="gizlilik-ve-veri-politikasi.html" target="_blank" rel="noopener">KVKK aydınlatma metnini</a>
+                  okudum; ad, e-posta ve mesaj bilgilerimin yalnızca talebimi
+                  değerlendirip bana dönüş yapılması amacıyla işlenmesini kabul ediyorum.
+                </span>
+              </label>
             </div>
             <div class="form-actions">
               <button class="button primary" type="submit">Talep Gönder</button>
@@ -101,6 +149,8 @@
           class="map-frame"
           title="Emek Hukuk konum haritası"
           src="https://www.google.com/maps?q=Safir%20Center%20OSB%20Kayseri&z=17&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
         <div class="map-actions">
           <a class="button ghost" href="https://www.google.com/maps/search/?api=1&query=Safir%20Center%20OSB%20Kayseri" target="_blank" rel="noreferrer">Google Maps'te Aç</a>
