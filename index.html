@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <title>Emek Hukuk Danışmanlık ve Arabuluculuk Merkezi | Kayseri Avukat</title>
     <meta
       name="description"
@@ -24,9 +25,12 @@
       {
         "@context": "https://schema.org",
         "@type": "LegalService",
+        "@id": "https://www.emekarabuluculuk.com/#organization",
         "name": "Emek Hukuk Danışmanlık ve Arabuluculuk Merkezi",
         "url": "https://www.emekarabuluculuk.com/",
         "email": "info@emekarabuluculuk.com",
+        "logo": "https://www.emekarabuluculuk.com/assets/img/favicon.svg",
+        "image": "https://www.emekarabuluculuk.com/assets/img/og-image.png",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Kayseri Organize Sanayi Bölgesi 9. Cadde No:5/1-4",
@@ -34,8 +38,35 @@
           "addressRegion": "Kayseri",
           "addressCountry": "TR"
         },
-        "areaServed": "Kayseri",
-        "priceRange": "$$"
+        "areaServed": {"@type": "City", "name": "Kayseri"},
+        "priceRange": "$$",
+        "sameAs": []
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://www.emekarabuluculuk.com/#website",
+        "url": "https://www.emekarabuluculuk.com/",
+        "name": "Emek Hukuk",
+        "inLanguage": "tr-TR",
+        "publisher": {"@id": "https://www.emekarabuluculuk.com/#organization"}
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Ana Menü",
+        "itemListElement": [
+          {"@type": "SiteNavigationElement", "position": 1, "name": "Ana Sayfa", "url": "https://www.emekarabuluculuk.com/"},
+          {"@type": "SiteNavigationElement", "position": 2, "name": "Rehberler", "url": "https://www.emekarabuluculuk.com/pages/rehberler.html"},
+          {"@type": "SiteNavigationElement", "position": 3, "name": "Hizmetler", "url": "https://www.emekarabuluculuk.com/pages/hizmetler.html"},
+          {"@type": "SiteNavigationElement", "position": 4, "name": "Kayseri Avukat", "url": "https://www.emekarabuluculuk.com/pages/kayseri-avukat.html"},
+          {"@type": "SiteNavigationElement", "position": 5, "name": "Kayseri Arabulucu", "url": "https://www.emekarabuluculuk.com/pages/kayseri-arabulucu.html"},
+          {"@type": "SiteNavigationElement", "position": 6, "name": "İletişim", "url": "https://www.emekarabuluculuk.com/pages/iletisim.html"}
+        ]
       }
     </script>
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
