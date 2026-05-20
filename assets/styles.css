@@ -832,15 +832,6 @@ h3 {
   font-weight: 700;
 }
 
-.visually-hidden {
-  position: absolute !important;
-  left: -9999px !important;
-  width: 1px !important;
-  height: 1px !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
-
 .skip-link {
   position: absolute;
   top: -100px;
@@ -1131,115 +1122,6 @@ main:focus {
   color: var(--ink);
 }
 
-/* Reading-time pill above guide H1 */
-.reading-time {
-  margin: 4px 0 18px;
-  color: var(--ink-soft);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-/* Share row near the end of a guide */
-.share-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px 14px;
-  margin: 32px 0 0;
-  padding: 16px 18px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--paper-strong);
-  font-size: 14px;
-}
-
-.share-row span {
-  color: var(--ink);
-  font-weight: 800;
-}
-
-.share-row a,
-.share-row button {
-  border: 1px solid var(--line);
-  border-radius: var(--radius-pill);
-  background: transparent;
-  padding: 7px 14px;
-  font-family: inherit;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--ink);
-  cursor: pointer;
-  text-decoration: none;
-  transition: border-color 0.15s ease, background-color 0.15s ease;
-}
-
-.share-row a:hover,
-.share-row a:focus-visible,
-.share-row button:hover,
-.share-row button:focus-visible {
-  border-color: var(--brass);
-  background: rgba(169, 130, 74, 0.08);
-  outline: none;
-}
-
-/* Scroll-progress bar on guide pages */
-.scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  width: 100%;
-  height: 3px;
-  background: var(--brass);
-  transform-origin: 0 0;
-  transform: scaleX(0);
-  pointer-events: none;
-  transition: transform 0.05s linear;
-}
-
-/* Back-to-top floating button */
-.back-to-top {
-  position: fixed;
-  right: 12px;
-  bottom: 88px;
-  z-index: 25;
-  display: grid;
-  width: 44px;
-  height: 44px;
-  place-items: center;
-  border: 1px solid rgba(255, 250, 241, 0.3);
-  border-radius: 50%;
-  background: var(--ink);
-  color: var(--paper-strong);
-  font-size: 20px;
-  font-weight: 700;
-  font-family: inherit;
-  cursor: pointer;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.18s ease, transform 0.18s ease;
-}
-
-.back-to-top.is-visible {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.back-to-top:hover,
-.back-to-top:focus-visible {
-  transform: translateY(-2px);
-  outline: 2px solid var(--brass);
-  outline-offset: 2px;
-}
-
-@media (min-width: 781px) {
-  .back-to-top {
-    bottom: 24px;
-  }
-}
-
 /* Related guides block on guide pages */
 .related-guides {
   margin: 36px 0 16px;
@@ -1385,23 +1267,5 @@ main:focus {
   }
   details {
     page-break-inside: avoid;
-  }
-  body::after {
-    display: block;
-    margin: 24pt 24pt 0;
-    padding-top: 8pt;
-    border-top: 0.5pt solid #999;
-    content: "Bu içerik şu adresten alınmıştır: " attr(data-canonical) " · Emek Hukuk Danışmanlık ve Arabuluculuk Merkezi";
-    font-size: 9pt;
-    color: #444;
-  }
-  @page {
-    margin: 18mm 14mm 22mm;
-  }
-  .reading-time,
-  .share-row,
-  .scroll-progress,
-  .back-to-top {
-    display: none !important;
   }
 }
