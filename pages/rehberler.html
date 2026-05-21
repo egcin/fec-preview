@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="tr">
+<html lang="tr-TR">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://maps.gstatic.com https://maps.googleapis.com https://*.googleusercontent.com; frame-src https://www.google.com; form-action https://formsubmit.co; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; base-uri 'self'; object-src 'none'" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <title>Hukuki Rehberler | Emek Hukuk Kayseri</title>
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="../assets/styles.css" />
     <script defer src="../assets/main.js"></script>
     <link rel="canonical" href="https://www.emekarabuluculuk.com/pages/rehberler.html" />
+    <link rel="alternate" hreflang="tr-TR" href="https://www.emekarabuluculuk.com/pages/rehberler.html" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="tr_TR" />
     <meta property="og:site_name" content="Emek Hukuk" />
@@ -51,6 +53,9 @@
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://www.emekarabuluculuk.com/assets/img/og-image.png" />
+    <link rel="alternate" type="application/rss+xml" title="Emek Hukuk Rehberleri" href="/feed.xml" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Emek Hukuk" />
   </head>
   <body>
     <a class="skip-link" href="#main">İçeriğe atla</a>
@@ -61,6 +66,7 @@
         <a href="../index.html">Ana Sayfa</a>
         <a href="rehberler.html">Rehberler</a>
         <a href="hizmetler.html">Hizmetler</a>
+        <a href="hakkimizda.html">Hakkımızda</a>
         <a href="kayseri-avukat.html">Kayseri Avukat</a>
         <a href="kayseri-arabulucu.html">Kayseri Arabulucu</a>
         <a href="iletisim.html">İletişim</a>
@@ -80,6 +86,11 @@
             <h2>En sık karşılaşılan sorulardan başlayın.</h2>
           </div>
           <a href="sik-sorulan-sorular.html">Sık sorulan sorular</a>
+        </div>
+        <div class="guide-search" role="search">
+          <label class="visually-hidden" for="guide-search">Rehberlerde ara</label>
+          <input id="guide-search" type="search" placeholder="Rehberlerde ara… (örn. ihbar tazminatı, icra itirazı)" autocomplete="off" />
+          <p class="guide-search-status" data-search-status aria-live="polite"></p>
         </div>
         <div class="filter-bar" role="group" aria-label="Kategori filtresi">
           <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Tümü</button>
@@ -496,6 +507,7 @@
     <footer class="site-footer">
       <div><strong>Emek Hukuk Danışmanlık ve Arabuluculuk Merkezi</strong><p><a class="map-address" href="https://www.google.com/maps/search/?api=1&query=Safir%20Center%20OSB%20Kayseri" target="_blank" rel="noreferrer">Kayseri Organize Sanayi Bölgesi 9. Cadde No:5/1-4 Melikgazi/Kayseri</a></p></div>
       <div><a href="mailto:info@emekarabuluculuk.com?subject=Web+Sitesi+%C4%B0leti%C5%9Fim">info@emekarabuluculuk.com</a><a href="gizlilik-ve-veri-politikasi.html">Gizlilik ve Veri Politikası</a></div>
+      <small class="copyright">© <span data-year>2026</span> Emek Hukuk Danışmanlık ve Arabuluculuk Merkezi · Tüm hakları saklıdır.</small>
     </footer>
     <div class="mobile-contact" aria-label="Hızlı iletişim">
       <a href="iletisim.html">Randevu</a>

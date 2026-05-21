@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Google News sitemap stub. Empty <urlset> today — the day articles get added
+  under pages/yayinlar/<slug>.html, a build script (planned) will populate
+  this file with the items Google News expects:
+
+    <url>
+      <loc>https://www.emekarabuluculuk.com/pages/yayinlar/<slug>.html</loc>
+      <news:news>
+        <news:publication>
+          <news:name>Emek Hukuk</news:name>
+          <news:language>tr</news:language>
+        </news:publication>
+        <news:publication_date>2026-MM-DDTHH:MM:SSZ</news:publication_date>
+        <news:title>...</news:title>
+      </news:news>
+    </url>
+
+  Only items published within the last 2 days are eligible per Google's policy.
+  https://developers.google.com/search/docs/crawling-indexing/sitemaps/news-sitemap
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+</urlset>

@@ -1,0 +1,12 @@
+# Emek Hukuk Danışmanlık ve Arabuluculuk Merkezi
+# Security disclosure policy — RFC 9116
+#
+# If you believe you have found a security or privacy issue affecting
+# emekarabuluculuk.com or this repository, please contact us using the
+# information below. We will acknowledge receipt and work in good faith with
+# you to resolve the issue.
+
+Contact: mailto:info@emekarabuluculuk.com
+Preferred-Languages: tr, en
+Canonical: https://www.emekarabuluculuk.com/.well-known/security.txt
+Expires: 2027-05-21T00:00:00Z

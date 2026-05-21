@@ -3,16 +3,16 @@
   --ink-soft: #38423d;
   --paper: #f7f2e9;
   --paper-strong: #fffaf1;
-  --paper-translucent: var(--paper-translucent);
-  --paper-muted: var(--paper-muted);
+  --paper-translucent: rgba(255, 250, 241, 0.72);
+  --paper-muted: #dbc7a9;
   --line: #ded3c0;
   --brass: #a9824a;
   --olive: #536152;
   --burgundy: #753b3f;
   --white: #ffffff;
   --shadow: 0 22px 70px rgba(23, 33, 31, 0.13);
-  --shadow-soft: var(--shadow-soft);
-  --shadow-button-hover: var(--shadow-button-hover);
+  --shadow-soft: 0 12px 42px rgba(23, 33, 31, 0.06);
+  --shadow-button-hover: 0 12px 28px rgba(23, 33, 31, 0.14);
   --radius: 8px;
   --radius-pill: 999px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -494,6 +494,7 @@ h3 {
 
 .site-footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 24px;
   padding: 34px clamp(18px, 5vw, 72px);
@@ -507,10 +508,21 @@ h3 {
   color: var(--paper-muted);
 }
 
-.site-footer div:last-child {
+.site-footer > div:last-of-type {
   display: grid;
   gap: 8px;
   text-align: right;
+}
+
+.copyright {
+  display: block;
+  width: 100%;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(219, 199, 169, 0.18);
+  color: rgba(219, 199, 169, 0.65);
+  font-size: 12px;
+  text-align: center;
 }
 
 .page-hero {
@@ -681,6 +693,12 @@ h3 {
   cursor: pointer;
   color: var(--ink);
   font-weight: 900;
+  border-radius: var(--radius);
+}
+
+.guide-content summary:focus-visible {
+  outline: 2px solid var(--burgundy);
+  outline-offset: 4px;
 }
 
 .faq-cluster {
@@ -830,6 +848,15 @@ h3 {
   background: rgba(83, 97, 82, 0.14);
   color: var(--ink);
   font-weight: 700;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 .skip-link {
@@ -1000,7 +1027,7 @@ main:focus {
     flex-direction: column;
   }
 
-  .site-footer div:last-child {
+  .site-footer > div:last-of-type {
     text-align: left;
   }
 
@@ -1058,6 +1085,36 @@ main:focus {
     top: 16px;
     left: 16px;
   }
+}
+
+/* Search input on rehberler.html */
+.guide-search {
+  margin: 0 0 18px;
+}
+
+.guide-search input[type="search"] {
+  width: 100%;
+  max-width: 560px;
+  padding: 12px 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: var(--paper-strong);
+  color: var(--ink);
+  font: inherit;
+  font-size: 15px;
+}
+
+.guide-search input[type="search"]:focus-visible {
+  outline: 2px solid var(--burgundy);
+  outline-offset: 2px;
+  border-color: var(--ink);
+}
+
+.guide-search-status {
+  margin: 8px 0 0;
+  min-height: 1.4em;
+  color: var(--ink-soft);
+  font-size: 13px;
 }
 
 /* Filter bar on rehberler.html */
@@ -1120,6 +1177,241 @@ main:focus {
 }
 .breadcrumb [aria-current="page"] {
   color: var(--ink);
+}
+
+/* Nested education list on the hakkımızda profile card. Each school on its
+   own line, dash bullet, year/degree in muted small text. */
+.education-list {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.education-list > li {
+  position: relative;
+  padding-left: 14px;
+}
+
+.education-list > li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--brass);
+  font-weight: 700;
+}
+
+.education-list small {
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+/* Timeline-style experience list on hakkımızda. Brass dot per entry,
+   connecting vertical line, role in bold, date in muted small text. */
+.experience-timeline {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+}
+
+.experience-timeline > li {
+  position: relative;
+  margin-left: 6px;
+  padding: 0 0 22px 22px;
+  border-left: 2px solid var(--line);
+}
+
+.experience-timeline > li:last-child {
+  padding-bottom: 0;
+  border-left-color: transparent;
+}
+
+.experience-timeline > li::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  background: var(--brass);
+  border: 2px solid var(--paper-strong);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--brass);
+}
+
+.experience-timeline p {
+  margin: 0;
+}
+
+.experience-timeline .experience-role {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.experience-timeline .experience-meta {
+  margin: 4px 0 8px;
+  color: var(--ink-soft);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+/* Social profile link with inline brand icon — used on hakkımızda. */
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--burgundy);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  color: var(--ink);
+  outline: none;
+}
+
+.social-icon {
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+/* 1-sentence summary callout at the top of a guide. Sits right under <h1>
+   and reads like a tl;dr. Google's featured-snippet algorithm often pulls
+   this verbatim into position-0 results when it's concise and matches the
+   user's query. Lawyer-filled per guide; the .guide-summary class only
+   styles the block, no auto-injection on existing guides. */
+.guide-summary {
+  margin: 18px 0 24px;
+  padding: 16px 20px;
+  border-left: 4px solid var(--burgundy);
+  border-radius: var(--radius);
+  background: var(--paper-strong);
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.guide-summary strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--burgundy);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Reading-time pill above guide H1 */
+.reading-time {
+  margin: 4px 0 18px;
+  color: var(--ink-soft);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Share row near the end of a guide */
+.share-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  margin: 32px 0 0;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper-strong);
+  font-size: 14px;
+}
+
+.share-row span {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.share-row a,
+.share-row button {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  padding: 7px 14px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.share-row a:hover,
+.share-row a:focus-visible,
+.share-row button:hover,
+.share-row button:focus-visible {
+  border-color: var(--brass);
+  background: rgba(169, 130, 74, 0.08);
+  outline: none;
+}
+
+/* Scroll-progress bar on guide pages */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 3px;
+  background: var(--brass);
+  transform-origin: 0 0;
+  transform: scaleX(0);
+  pointer-events: none;
+  transition: transform 0.05s linear;
+}
+
+/* Back-to-top floating button */
+.back-to-top {
+  position: fixed;
+  right: 12px;
+  bottom: 88px;
+  z-index: 25;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 1px solid rgba(255, 250, 241, 0.3);
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--paper-strong);
+  font-size: 20px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  transform: translateY(-2px);
+  outline: 2px solid var(--brass);
+  outline-offset: 2px;
+}
+
+@media (min-width: 781px) {
+  .back-to-top {
+    bottom: 24px;
+  }
 }
 
 /* Related guides block on guide pages */
@@ -1267,5 +1559,23 @@ main:focus {
   }
   details {
     page-break-inside: avoid;
+  }
+  body::after {
+    display: block;
+    margin: 24pt 24pt 0;
+    padding-top: 8pt;
+    border-top: 0.5pt solid #999;
+    content: "Bu içerik şu adresten alınmıştır: " attr(data-canonical) " · Emek Hukuk Danışmanlık ve Arabuluculuk Merkezi";
+    font-size: 9pt;
+    color: #444;
+  }
+  @page {
+    margin: 18mm 14mm 22mm;
+  }
+  .reading-time,
+  .share-row,
+  .scroll-progress,
+  .back-to-top {
+    display: none !important;
   }
 }

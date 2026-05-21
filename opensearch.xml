@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>Emek Hukuk</ShortName>
+  <LongName>Emek Hukuk Danışmanlık ve Arabuluculuk Merkezi</LongName>
+  <Description>Kayseri merkezli avukatlık, hukuki danışmanlık ve arabuluculuk hizmetleri sitesinde arama yapın.</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Language>tr-TR</Language>
+  <Image width="16" height="16" type="image/png">https://www.emekarabuluculuk.com/assets/img/favicon-16.png</Image>
+  <Image width="32" height="32" type="image/png">https://www.emekarabuluculuk.com/assets/img/favicon-32.png</Image>
+  <Image width="192" height="192" type="image/png">https://www.emekarabuluculuk.com/assets/img/icon-192.png</Image>
+  <Url type="text/html" method="get" template="https://www.google.com/search?q={searchTerms}+site%3Aemekarabuluculuk.com" />
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://www.emekarabuluculuk.com/opensearch.xml" />
+  <moz:SearchForm>https://www.emekarabuluculuk.com/pages/rehberler.html</moz:SearchForm>
+</OpenSearchDescription>

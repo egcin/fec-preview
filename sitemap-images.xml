@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.emekarabuluculuk.com/</loc>
+    <image:image>
+      <image:loc>https://www.emekarabuluculuk.com/assets/img/hero.webp</image:loc>
+      <image:title>Emek Hukuk OSB ofisi — masaüstü görsel</image:title>
+      <image:caption>Kayseri OSB merkezli hukuk ve arabuluculuk hizmetleri görsel öğesi.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emekarabuluculuk.com/assets/img/hero-mobile.webp</image:loc>
+      <image:title>Emek Hukuk OSB ofisi — mobil görsel</image:title>
+      <image:caption>Kayseri OSB merkezli hukuk ve arabuluculuk hizmetleri görsel öğesi (mobil).</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emekarabuluculuk.com/assets/img/og-image.png</image:loc>
+      <image:title>Emek Hukuk — sosyal paylaşım görseli</image:title>
+      <image:caption>Sosyal medya paylaşımlarında görünen kart görseli.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emekarabuluculuk.com/assets/img/favicon.svg</image:loc>
+      <image:title>Emek Hukuk logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.emekarabuluculuk.com/assets/img/icon-512.png</image:loc>
+      <image:title>Emek Hukuk uygulama simgesi</image:title>
+    </image:image>
+  </url>
+</urlset>
